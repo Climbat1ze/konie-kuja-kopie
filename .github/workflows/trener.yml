@@ -12,7 +12,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: trener
+  group: trener-odpowiedzi
   cancel-in-progress: false
 
 jobs:
