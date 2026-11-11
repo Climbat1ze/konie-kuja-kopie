@@ -1,0 +1,20 @@
+{
+ "status": "ok",
+ "cwiczenia": [
+  "PL_09",
+  "P1_02",
+  "P2_04",
+  "PL_06",
+  "PL_07"
+ ],
+ "pominiete": [
+  "barki",
+  "triceps",
+  "plecy",
+  "nogi"
+ ],
+ "komentarz": "Bark boli, to żadnych dipsów ani barków, koń nie będzie cię kulał. Klata na maszynie i hantlach, biceps na koniec, rób czysto i bez szarpania. Jak ból wróci, odłóż ciężar i do lekarza.",
+ "typ": "trening",
+ "model": "sonnet",
+ "czas": "2026-11-11T21:10:08+00:00"
+}
