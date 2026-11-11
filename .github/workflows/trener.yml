@@ -1,0 +1,40 @@
+name: Trener (Claude)
+# Telefon zapisuje prosby/<id>.json, ten workflow odpowiada plikiem odpowiedzi/<id>.json.
+# Sekret: CLAUDE_CODE_OAUTH_TOKEN (subskrypcja, `claude setup-token`). Zmienne opcjonalne: LIMIT_DZIENNY (30), CLAUDE_WYLACZ (1 = stop).
+
+on:
+  push:
+    branches: [main]
+    paths: ["prosby/**"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trener
+  cancel-in-progress: false
+
+jobs:
+  odpowiedz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code@2.1.316 >/dev/null 2>&1 && claude --version || echo "CLI niedostępne"
+      - name: Odpowiedzi
+        env:
+          CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          LIMIT_DZIENNY: ${{ vars.LIMIT_DZIENNY || '30' }}
+          CLAUDE_WYLACZ: ${{ vars.CLAUDE_WYLACZ || '0' }}
+        run: python3 trener.py
+      - name: Zapis
+        run: |
+          git config user.name "trener-konie-kuja"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add odpowiedzi
+          git diff --cached --quiet && exit 0
+          git commit -q -m "odpowiedzi trenera"
+          for i in 1 2 3 4; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep $((i*3)); done
+          exit 1
