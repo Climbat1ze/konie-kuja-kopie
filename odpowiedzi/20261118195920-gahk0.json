@@ -1,0 +1,17 @@
+{
+ "status": "ok",
+ "punkty": [
+  "Ławka: 65×7, 60×8, 60×6. Cel 8 nie siadł, zostajesz na 65 kg. Ambicja poczeka.",
+  "Hammer 45×7, 6, potem 39×5. Hantle 26×8, 8. Zostajecie na wadze, domknij ósemki, nie zgrywaj byka.",
+  "Lina 45×15 dwa razy, czysto: 47 kg. Wznosy nóg: jedna seria 10 zamiast 15. Ogon w górę, leniu!"
+ ],
+ "ciezary": {
+  "P1_01": 65.0,
+  "P1_02": 45.0,
+  "P1_05": 26.0,
+  "P1_07": 47.0
+ },
+ "typ": "ocena",
+ "model": "sonnet",
+ "czas": "2026-11-18T20:00:00+00:00"
+}
