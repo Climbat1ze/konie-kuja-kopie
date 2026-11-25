@@ -1,0 +1,19 @@
+{
+ "status": "ok",
+ "punkty": [
+  "147 minut na nogi, a suwnica 105 kg tylko 8, 10, 10 na 12? Zostajesz na 105, nie dyskutuj.",
+  "Wyprosty 60 kg, uginanie 60 kg i przywodziciel 45 kg wszystko zaliczone. Dokładam po 5%, boisz się igieł?",
+  "Bułgary 15 powtórzeń w każdej serii, Hammer 3×12 po 50 kg. Dobra robota, ale nie zadzieraj kopyt."
+ ],
+ "ciezary": {
+  "LG_01": 10.5,
+  "LG_02": 52.5,
+  "LG_03": 105.0,
+  "LG_04": 63.0,
+  "LG_05": 63.0,
+  "LG_08": 47.0
+ },
+ "typ": "ocena",
+ "model": "sonnet",
+ "czas": "2026-11-25T21:00:16+00:00"
+}
